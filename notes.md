@@ -40,6 +40,7 @@
     docker network ls
     docker rm <name || id>
     docker network prune
+    git init && git add . && git commit -m "<something>" && git remote add origin <repoLink> && git push -u origin main
 
 7. Pushing image to docker hub:
     docker tag <iamgeID> dirghayu101/<imageName>
@@ -53,3 +54,4 @@
 - https://docs.docker.com/reference/dockerfile/#copy -> dockerfile reference
 - https://docs.docker.com/reference/cli/docker/image/build/ -> docker build CLI reference
 - https://stackoverflow.com/questions/45142528/what-is-a-dangling-image-and-what-is-an-unused-image -> Dangling image.
+- https://chatgpt.com/share/f698c2eb-8d47-4060-8eae-9c8e8226526c
