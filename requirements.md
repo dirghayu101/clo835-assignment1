@@ -1,0 +1,3 @@
+- Mongo should be running in a container with port not exposed to the localhost.
+- Communication is happening using virtual networking.
+- 
