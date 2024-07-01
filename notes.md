@@ -11,6 +11,9 @@
 3. A network device driver controls the networking hardware. This driver allows your operating system to interface with the network card, facilitating communication between your computer and networks, like the internet or a local network.
 4. URI is used to refer to any string that identifies a resource like mongodb://mongodb:27017, URL is used commonly with web addresses.
 
+# Why not docker-compose instead of bridge networking?
+- docker-compose will increase the complexity in simple projects and decrease the complexity in complex project. This use case is the former.
+
 # Commands Used:
 1. Importing images: 
     docker pull python:3.12-slim
@@ -38,8 +41,12 @@
     docker rm <name || id>
     docker network prune
 
+7. Pushing image to docker hub:
+    docker tag <iamgeID> dirghayu101/<imageName>
+    docker push dirghayu101/<imageName>:latest
+
 # Noticeable mistakes I made:
-1. Custom named mongo container, use the name "mongodb", only this name will be resolved to the running container because it's hard coded in the source.
+1. Custom named mongo container, use the name "mongodb", only this name will be resolved to the running container because it's hard coded in the source. -> Container in the same network use container names as hostnames for communicating.
 
 # References:
 - https://docs.docker.com/build/building/multi-stage/ -> multistage official docs

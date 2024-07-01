@@ -1,4 +1,3 @@
-
 # Python API Server
 
 This is a simple Python API Server using POST to save data to MongoDB and GET requests to receive the data from MongoDB.
